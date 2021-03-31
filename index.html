@@ -1,0 +1,184 @@
+<html>
+<head>
+  <title>Chromofor app</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+
+    @import url('https://rsms.me/inter/inter-ui.css');
+    ::selection {
+      background: #2D2F36;
+    }
+    ::-webkit-selection {
+      background: #2D2F36;
+    }
+    ::-moz-selection {
+      background: #2D2F36;
+    }
+    body {
+      background: white;
+      font-family: 'Inter UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    .page {
+      background: #e2e2e5;
+      display: flex;
+      flex-direction: column;
+      height: calc(100% - 40px);
+      position: absolute;
+      place-content: center;
+      width: calc(100% - 40px);
+    }
+    @media (max-width: 767px) {
+      .page {
+        height: auto;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+      }
+    }
+    .container {
+      display: flex;
+      height: 320px;
+      margin: 0 auto;
+      width: 640px;
+    }
+    @media (max-width: 767px) {
+      .container {
+        flex-direction: column;
+        height: 630px;
+        width: 320px;
+      }
+    }
+    .left {
+      background: white;
+      height: calc(100% - 40px);
+      top: 20px;
+      position: relative;
+      width: 50%;
+    }
+    @media (max-width: 767px) {
+      .left {
+        height: 100%;
+        left: 20px;
+        width: calc(100% - 40px);
+        max-height: 270px;
+      }
+    }
+    .login {
+      font-size: 47px;
+      font-weight: 900;
+      margin: 50px 20px 40px;
+    }
+    .eula {
+      color: #999;
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 40px;
+    }
+    .right {
+      background: #474A59;
+      box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
+      color: #F1F1F2;
+      position: relative;
+      width: 50%;
+    }
+    @media (max-width: 767px) {
+      .right {
+        flex-shrink: 0;
+        height: 100%;
+        width: 100%;
+        max-height: 350px;
+      }
+    }
+    svg {
+      position: absolute;
+      width: 320px;
+    }
+    path {
+      fill: none;
+      stroke: url(#linearGradient);;
+      stroke-width: 4;
+      stroke-dasharray: 240 1386;
+    }
+    .form {
+      margin: 40px;
+      position: absolute;
+    }
+    label {
+      color:  #c2c2c5;
+      display: block;
+      font-size: 14px;
+      height: 16px;
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+    input {
+      background: f2f2f2;
+      border: 0;
+      color: #474A59;
+      font-size: 20px;
+      height: 30px;
+      line-height: 30px;
+      outline: none !important;
+      width: 100%;
+    }
+    input::-moz-focus-inner { 
+      border: 0; 
+    }
+    #submit {
+      color: #707075;
+      margin-top: 40px;
+      transition: color 300ms;
+    }
+    #submit:focus {
+      color: #f2f2f2;
+    }
+    #submit:active {
+      color: #d0d0d2;
+    }
+    
+    </style>
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <img class="d-block w-100" src="NAME.png" class="mr-5 mb-3" alt="First slide">
+    <h3>Chromofor App</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <a href="asama1.html"><button onclick="logout()">Play</button></a>
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyABlkdfvJfvMuaeybj9EGKAeduVAMKylzU",
+    authDomain: "deneme-b14c3.firebaseapp.com",
+    projectId: "deneme-b14c3",
+    storageBucket: "deneme-b14c3.appspot.com",
+    messagingSenderId: "554859267680",
+    appId: "1:554859267680:web:990a94350577b78dea2505",
+    measurementId: "G-PHJHLNESPR"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  </script>
+  <script src="index.js"></script>
+
+</body>
+</html>

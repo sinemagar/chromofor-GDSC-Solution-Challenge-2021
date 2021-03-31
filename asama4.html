@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+
+
+    <title>Chromofor app</title>
+
+
+    <style>
+
+        .true{
+
+            background-color: #73ff00;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="d-flex justify-content-center row">
+            <div class="col-md-10 col-lg-10">
+                <div class="border">
+                    <img class="d-block w-100" src="3.png" >
+                    
+                    <div class="question bg-white p-3 border-bottom">
+                        <div class="d-flex flex-row align-items-center question-title">
+                            <h3 class="text-danger">T.</h3>
+                            <h5 class="mt-1 ml-2">Why should we get away from a stranger?</h5>
+                        </div>
+                        <p  style="font-size: 20px;">
+                        If you take the sugar the stranger proposes and go away, bad things can happen to you.
+
+In cases like this, you can go to your family or the police and ask for help.</p>
+                        <br>
+                        <div class="d-flex flex-row align-items-center question-title">
+                            <button type="button" id="sesbaslabuton" class="btn btn-default btn-primary " style="width: 300px; height: 50px;">Play</button></a>
+                            <audio   autoplay id="ses">
+                                  
+                                  <source src="voice2.mp3" type="audio/mpeg" />
+                                  
+                                </audio>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+                        <button class="btn btn-primary d-flex align-items-center btn-danger" type="button">
+                           <a href="asama3.html" style="color: white;"> <i class="fa fa-angle-left mt-1 mr-1"></i>&nbsp;previous </a>
+                        </button>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+ 
+   
+      
+   var x=document.getElementById("ses");
+   document.getElementById("sesbaslabuton").addEventListener("click",sesbasla)
+   function sesbasla()
+   {
+     x.play();
+   }
+   
+   </script>
+</html>
